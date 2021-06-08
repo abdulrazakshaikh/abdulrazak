@@ -320,10 +320,10 @@ body::-webkit-scrollbar-thumb{
     width: 50%;
   }
   #preloader .loader_line{
-    margin: auto 15% auto auto;
+    margin: auto 50% auto auto;
   }
   .spinner-border{
-    right: 15%;
+    right: 0;
   }
 }
 
