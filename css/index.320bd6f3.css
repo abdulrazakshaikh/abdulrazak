@@ -805,7 +805,7 @@ a:hover {
 
 }
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 321px){
     .grid__item{
         height: 90px;
         width: 90px;
