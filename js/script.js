@@ -52,7 +52,6 @@ function abdul_tm_my_load() {
     setTimeout(function(){
       $('.logo-wrap').removeClass('active');
     }, speed + 4000);
-
     // setTimeout(function(){
     //   $('.loader-wrap').addClass('is-hidden');
     // }, speed + 1000);
@@ -95,6 +94,26 @@ function abdul_tm_preloader() {
 $(function () {
   $('[data-bs-toggle="tooltip"]').tooltip()
 });
+
+
+// $(".grid__item").click(function(){
+//     alert('sdsdds');
+//     setTimeout(function() {
+//        if ($('.grid').hasClass('grid--inactive')) {
+//         $( "body" ).addClass( "previewBody" );
+//         //} else {
+//         $( "body" ).removeClass("previewBody");
+//        }
+//     }, speed + 2000);
+
+  
+// });
+// $(function () {
+//     if ($('.grid').hasClass("grid--inactive")) {
+//         $("body").addClass("preview-body");
+//     }
+// });
+
 
 // cursor
 function abdul_tm_cursor() {
