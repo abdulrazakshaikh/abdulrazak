@@ -48,7 +48,6 @@ body {
     background: url('../img/pattern-bg.png') repeat center center;
     background-color: #e8eaed;
     /*background: var(--bg-pattern);*/
-    overflow-y: auto;
     /*overflow: hidden;*/
 }
 .h-100vh{height: 100vh;}
@@ -58,9 +57,55 @@ body {
 /*.home-section{
 	background: url('../img/pattern-bg.png') repeat center center;
 }*/
+/*.home-section:before{
+    content: '';
+    background: url(../img/bg-image.jpg) no-repeat center bottom / cover;
+    backdrop-filter: blur(10px) brightness(98%);
+    filter: blur(10px) brightness(98%);
+    width: 100%;
+    height: 100%;
+}*/
+.home-section{
+    /*background: antiquewhite;*/
+    /*background: url(../img/bg.png) no-repeat center bottom / cover;*/
+    /*background: #dc1a5c;
+    background: -moz-linear-gradient(left, #dc1a5c 0%, #ea3a50 50%, #f37042 100%);
+    background: -webkit-linear-gradient(left, #dc1a5c 0%,#ea3a50 50%,#f37042 100%);
+    background: linear-gradient(to right, #dc1a5c 0%,#ea3a50 50%,#f37042 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dc1a5c', endColorstr='#f37042',GradientType=1 );*/
+
+    
 
 
+    
+
+    /*margin: 1rem;*/
+    /*height: calc(100% - 2rem);
+    width: calc(100% - 2rem);*/
+    /*border-radius: 10px;*/
+}
 /*--------------------------------COMMON END---------------------------------*/
+
+/*------------------------------SCROLLBAR START------------------------------*/
+body{
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    -webkit-scroll-snap-type: mandatory;
+    scroll-snap-type: mandatory;
+    -webkit-scroll-snap-points-y: repeat(100%);
+    scroll-snap-points-y: repeat(100%);
+}
+body::-webkit-scrollbar{
+    width: 3px;
+}
+
+body::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: var(--ars-color-basicprimary);
+}
+/*------------------------------SCROLLBAR END------------------------------*/
 
 /*----------------------------MOUSE CURSOR START-----------------------------*/
 @media screen and (min-width: 992px){	
@@ -101,8 +146,8 @@ body {
 	.cursor-outer.cursor-hover{
 		border-color: var(--ars-color-basicprimary);
 		background-color: rgba(34, 153, 160, 0.5);
-		width: 48px;
-		height: 48px;
+		/*width: 48px;
+		height: 48px;*/
 		border: 0px; 
 		-webkit-transition: width .3s ease-in-out,height .3s ease-in-out,margin .3s ease-in-out,opacity .3s ease-in-out;
 	    transition: width .3s ease-in-out,height .3s ease-in-out,margin .3s ease-in-out,opacity .3s ease-in-out;
@@ -145,14 +190,16 @@ body {
     transition: all .3s ease 0s;
 }
 #preloader:before{
-    width: 58.3333333333%;
+    /*width: 58.3333333333%;*/
+    width: 50%;
     /*background: #dc1a5c;
     background: -moz-linear-gradient(left,  #dc1a5c 0%, #ea3a50 50%, #f37042 100%);
     background: -webkit-linear-gradient(left,  #dc1a5c 0%,#ea3a50 50%,#f37042 100%);
     background: linear-gradient(to right,  #dc1a5c 0%,#ea3a50 50%,#f37042 100%);*/
 }
 #preloader:after {
-    width: 41.6666666667%;
+    /*width: 41.6666666667%;*/
+    width: 50%;
     left: auto;
     right: 0;
     /*background: #dc1a5c;
@@ -162,7 +209,8 @@ body {
 }
 
 #preloader .loader_line {
-    margin: auto auto auto 58.3333333333%;
+    /*margin: auto auto auto 58.3333333333%;*/
+    margin: auto auto auto 50%;
     width: 1px;
     height: 230px;
     position: relative;
@@ -357,9 +405,9 @@ body.loaded .overlay_effect:after {
 
 /*----------------------------ABOUT SECTION START----------------------------*/
 .about-section{
-	background: #ffffff;
-	border-top: 1px solid var(--ars-color-primary);
-	border-bottom: 1px solid var(--ars-color-primary);
+	/*background: #ffffff;*/
+	/*border-top: 1px solid var(--ars-color-secondary);
+	border-bottom: 1px solid var(--ars-color-secondary);*/
     width: 100vw;
     /* height: 100vh; */
     /* height: calc(100vh + 70px); */
@@ -831,6 +879,14 @@ ul.skills-list li .icon-wrap img{
         background: var(--ars-color-primary);
         animation: MoveUpDown 1s linear infinite;
     } 
+    .line-scroll-down-container .line-scroll-down:after{
+        content: '\f1e3';
+        font-family: 'Material Icons Outlined';
+        position: absolute;
+        bottom: -9px;
+        left: -8px;
+        color: var(--ars-color-primary);
+    }
 
     @keyframes MoveUpDown {
       0% {
@@ -947,15 +1003,21 @@ ul.skills-list li .icon-wrap img{
 
 @media (max-width: 767px) {
 	.content-area{flex: 0 0 100%; width: 100%; padding: 54px 10px; }
-	
+	.about-heading{
+        font-size: 44px;
+        margin: 4.5rem 0.5rem 1.5rem 0.5rem;
+    }
+    .contact-heading{
+        font-size: 44px;
+    }
 }
 
 @media (max-width: 991px) {
 	/*.home-section{display: none;}*/
-	.content__title, .grid{display: none;}
-	.home-section{
+	/*.content__title, .grid{display: none;}*/
+	/*.home-section{
 		background: url(https://lumiere-a.akamaihd.net/v1/images/sa_pixar_virtualbg_coco_16x9_9ccd7110.jpeg) no-repeat center / cover;
-	}
+	}*/
 	.contact-section, .about-section{font-size: 54px; letter-spacing: 2px; padding: 1rem 0;}
 	.main{width: 100%;}
 	.logo-wrap{margin: 10px; height: 90px; width: 90px;}
