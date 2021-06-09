@@ -67,7 +67,8 @@ body {
 }*/
 .home-section{
     /*background: antiquewhite;*/
-    /*background: url(../img/bg.png) no-repeat center bottom / cover;*/
+    background: linear-gradient(to top, #dc1a5c 0%,#ea3a50 50%,#f37042 100%), url(../img/bg-image.jpg) no-repeat center bottom / cover;
+    background-blend-mode: multiply;
     /*background: #dc1a5c;
     background: -moz-linear-gradient(left, #dc1a5c 0%, #ea3a50 50%, #f37042 100%);
     background: -webkit-linear-gradient(left, #dc1a5c 0%,#ea3a50 50%,#f37042 100%);
